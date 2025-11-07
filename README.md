@@ -1,7 +1,6 @@
 # MLP_Backprop_Coursework
 
 
-```markdown
 # MLP_Backprop_Coursework
 
 This repository contains MATLAB implementations for a coursework on **incremental backpropagation for a 2-input, 3-hidden, 1-output Multilayer Perceptron (MLP)**. The coursework demonstrates both **manual step-by-step calculation** and a **generalized MATLAB prototype** for incremental backpropagation.
@@ -10,7 +9,7 @@ This repository contains MATLAB implementations for a coursework on **incrementa
 
 ## **Repository Structure**
 
-```
+
 
 MLP_Backprop_Coursework/
 │-- README.md
@@ -18,7 +17,7 @@ MLP_Backprop_Coursework/
 │-- Part2_MLP_IncrementalGeneral.m # Generalized incremental backpropagation
 │-- results/ (optional: logs, screenshots)
 
-```
+
 
 ---
 
@@ -37,24 +36,23 @@ MLP_Backprop_Coursework/
 - **Hidden layer:** 3 sigmoid nodes (`h1`, `h2`, `h3`)  
 - **Output layer:** 1 linear summation unit (no bias)  
 - **Connections:**
-```
+
 
 W1*x1 → h1, W2*x2 → h1
 W3*x1 → h2, W4*x2 → h2
 W5*x1 → h3, W6*x2 → h3
 W7*h1 → output, W8*h2 → output, W9*h3 → output
 
-```
+
 
 ### **How It Works**
 1. **Forward Pass:** Computes hidden layer outputs (sigmoid) and output layer value (linear).  
 2. **Backward Pass:** Computes **beta values (errors)** for output and hidden nodes.  
 3. **Weight Update:** Applies **incremental backpropagation**:
-```
+
 
 ΔW = learning_rate * beta * input
 
-````
 - Updates weights immediately after each sample.  
 4. **Outputs Displayed:**  
 - Hidden layer outputs  
